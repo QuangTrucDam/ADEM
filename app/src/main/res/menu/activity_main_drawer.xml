@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_adv_post"
+            android:icon="@android:drawable/ic_menu_upload"
+            android:title="Đăng Quảng Cáo" />
+        <item
+            android:id="@+id/nav_bussines_manage"
+            android:icon="@android:drawable/ic_menu_myplaces"
+            android:title="Quản lý kinh doanh" />
+        <item
+            android:id="@+id/nav_auto_post"
+            android:icon="@android:drawable/ic_menu_edit"
+            android:title="Đămg bài tự động" />
+        <item
+            android:id="@+id/nav_management"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Quản lý tài khoản" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_invite_friends"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Mời bạn bè" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@android:drawable/ic_lock_power_off"
+                android:title="Logout" />
+        </menu>
+    </item>
+
+</menu>
