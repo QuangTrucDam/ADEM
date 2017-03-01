@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:maxLines="5"
+            android:lines="4"
+            android:layout_gravity="center"
+            android:id="@+id/editText"
+            android:hint="Bài viết của bạn"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_marginLeft="@dimen/margin_left"
+            android:layout_width="@dimen/icon_layout"
+            android:layout_height="@dimen/icon_layout"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_checkin"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint=" Địa điểm checkin"
+            android:maxLines="1"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_marginLeft="@dimen/margin_left"
+            android:layout_width="@dimen/icon_layout"
+            android:layout_height="@dimen/icon_layout"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_tag"/>
+
+        <EditText
+            android:maxLines="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint=" Tag bạn bè"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:textColor="@android:color/black"
+        android:text="Chia sẻ"/>
+
+    <View
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/black"/>
+    <LinearLayout
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="4">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:onClick="face_share"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:src="@drawable/ic_facebook"/>
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:onClick="face_share"
+            android:layout_height="48dp"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:src="@drawable/ic_ggplus"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/black"/>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:gravity="left|center"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@android:color/black"
+            android:text="Tần suất đăng"/>
+
+        <TextView
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"/>
+    </LinearLayout>
+
+    <SeekBar
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="48"
+        android:progress="10"
+        android:id="@+id/seekBarTanSuat" />
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_width="match_parent"
+        android:gravity="left|center"
+        android:layout_height="wrap_content">
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
