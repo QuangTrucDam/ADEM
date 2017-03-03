@@ -1,37 +1,19 @@
 package com.adem.activities;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.nfc.Tag;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.adem.R;
-import com.adem.activities.MainActivity;
-import com.bumptech.glide.Glide;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
-import com.facebook.GraphRequest;
-import com.facebook.GraphResponse;
-import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
-import com.squareup.picasso.Picasso;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.net.MalformedURLException;
-import java.net.URL;
-
-public class login_facebook extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     private LoginButton loginButton;
     private CallbackManager callbackManager;
     ImageView user_nav_picture;
@@ -49,8 +31,6 @@ public class login_facebook extends AppCompatActivity {
         loginButton.setReadPermissions("email");
         loginButton.setReadPermissions("user_friends");
         loginButton.setReadPermissions("public_profile");
-
-
 
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
