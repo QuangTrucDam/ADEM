@@ -115,12 +115,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <ImageView
-                    android:layout_marginLeft="5dp"
-                    android:layout_width="@dimen/icon_layout"
-                    android:layout_height="@dimen/icon_layout"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_hashtag"/>
 
                 <EditText
                     android:maxLines="1"
@@ -131,6 +125,14 @@
                     android:hint=" Hashtag"
                     android:padding="5dp"
                     android:layout_weight="1"/>
+
+                <ImageView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="@dimen/icon_layout"
+                    android:layout_height="@dimen/icon_layout"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_hashtag"/>
+
             </LinearLayout>
 
 
