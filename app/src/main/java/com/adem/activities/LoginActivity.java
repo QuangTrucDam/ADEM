@@ -13,6 +13,8 @@ import com.facebook.FacebookException;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
+import java.util.Arrays;
+
 public class LoginActivity extends AppCompatActivity {
     private LoginButton loginButton;
     private CallbackManager callbackManager;
@@ -28,9 +30,8 @@ public class LoginActivity extends AppCompatActivity {
         callbackManager = CallbackManager.Factory.create();
 
         loginButton = (LoginButton)findViewById(R.id.login_button);
-        loginButton.setReadPermissions("email");
-        loginButton.setReadPermissions("user_friends");
-        loginButton.setReadPermissions("public_profile");
+        loginButton.setReadPermissions(Arrays.asList("email"));//"user_friends"
+
 
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override

@@ -1,5 +1,7 @@
 package com.adem.activities;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -9,6 +11,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,17 +25,32 @@ public class PostActivity extends AppCompatActivity implements TimePickerDialog.
     private TextView tv_frequency;
     private Button tv_timefrom;
     private Button tv_timeto;
+    private ImageView iv_selectImage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post);
         getSupportActionBar().setTitle("Cài đặt bài viết");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         setEventView();
         /*
         * TODO: start code here
         * */
+        selectImage();
 
+    }
+
+    private void selectImage() {
+        iv_selectImage = (ImageView) findViewById(R.id.iv_selectImage);
+        iv_selectImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // For multiple images
+                Intent i = new Intent(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(i, 100);
+            }
+        });
     }
 
     @Override
@@ -50,6 +68,16 @@ public class PostActivity extends AppCompatActivity implements TimePickerDialog.
             Toast.makeText(this, "Post", Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 100 && resultCode == Activity.RESULT_OK) { // single pick
+            iv_selectImage.setImageURI(data.getData());
+        } else if (requestCode == 200 && resultCode == Activity.RESULT_OK) {
+
+        }
     }
 
     private void setEventView() { // set su kien select cho cac view

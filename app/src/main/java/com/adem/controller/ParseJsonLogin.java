@@ -1,7 +1,6 @@
 package com.adem.controller;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.util.Log;
@@ -49,7 +48,7 @@ public class ParseJsonLogin {
                                     object != null) {
 
                                 String name = object.opt("first_name")+" "+object.opt("last_name");
-                                String email = object.opt("email").toString();
+                                String email = object.opt("email").toString() ;
 
                                 user_nav_name = (TextView)activity.findViewById(R.id.user_nav_name);
                                 user_nav_picture = (ImageView)activity.findViewById(R.id.user_nav_picture);

@@ -38,7 +38,11 @@
 
         <activity
             android:parentActivityName=".activities.MainActivity"
-            android:name=".activities.PostActivity"></activity>
+            android:name=".activities.PostActivity">
+            <intent-filter>
+                <action android:name="luminous.ACTION_MULTIPLE_PICK" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
