@@ -28,11 +28,12 @@
                 <ImageView
                     android:id="@+id/iv_selectImage"
                     android:layout_width="@dimen/width_img"
-                    android:layout_height="match_parent"
+                    android:layout_marginRight="8dp"
+                    android:layout_height="70dp"
                     android:src="@drawable/ic_menu_slideshow"
                     />
 
-                <EditText
+                <com.rengwuxian.materialedittext.MaterialEditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="textMultiLine"
@@ -56,17 +57,32 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:visibility="gone"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:weightSum="4">
-                <android.support.v7.widget.RecyclerView
-                    android:layout_width="match_parent"
-                    android:layout_gravity="center"
-                    android:padding="5dp"
-                    android:background="@color/colorPrimary"
-                    android:layout_height="40dp"></android.support.v7.widget.RecyclerView>
-            </LinearLayout>
 
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:id="@+id/linear_listImage"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:id="@+id/iv_mutilImage"
+                            android:src="@android:drawable/ic_menu_add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+            <View
+                android:layout_marginTop="@dimen/margin_top"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@android:color/black"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -75,14 +91,14 @@
                     android:layout_marginLeft="5dp"
                     android:layout_width="@dimen/icon_layout"
                     android:layout_height="@dimen/icon_layout"
+                    android:layout_marginRight="8dp"
                     android:layout_gravity="center"
                     android:src="@drawable/ic_checkin"/>
-                <EditText
+                <com.rengwuxian.materialedittext.MaterialEditText
                     android:layout_marginTop="@dimen/margin_top"
                     android:layout_marginBottom="@dimen/margin_top"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="5dp"
                     android:hint=" Địa điểm checkin"
                     android:maxLines="1"
                     android:layout_weight="1"/>
@@ -96,17 +112,17 @@
                     android:layout_marginLeft="5dp"
                     android:layout_width="@dimen/icon_layout"
                     android:layout_height="@dimen/icon_layout"
+                    android:layout_marginRight="8dp"
                     android:layout_gravity="center"
                     android:src="@drawable/ic_tag"/>
 
-                <EditText
+                <com.rengwuxian.materialedittext.MaterialEditText
                     android:maxLines="1"
                     android:layout_marginTop="@dimen/margin_top"
                     android:layout_marginBottom="@dimen/margin_top"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint=" Tag bạn bè"
-                    android:padding="5dp"
                     android:layout_weight="1"/>
             </LinearLayout>
 
@@ -119,16 +135,16 @@
                     android:layout_marginLeft="5dp"
                     android:layout_width="@dimen/icon_layout"
                     android:layout_height="@dimen/icon_layout"
+                    android:layout_marginRight="8dp"
                     android:layout_gravity="center"
                     android:src="@drawable/ic_hashtag"/>
-                <EditText
+                <com.rengwuxian.materialedittext.MaterialEditText
                     android:maxLines="1"
                     android:layout_marginTop="@dimen/margin_top"
                     android:layout_marginBottom="@dimen/margin_top"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint=" Hashtag"
-                    android:padding="5dp"
                     android:layout_weight="1"/>
 
 
